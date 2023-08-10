@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	int p,y,c;
+	printf("enter the principal amount:");
+	scanf("%d",&p);
+	printf("enter the year:");
+	scanf("%d",&y);
+	printf("enter 1 for senior citizen \n enter 0 for others:");
+	scanf("%d",&c);
+	if(c==1)
+	{
+		double interest=p*y*(0.12);
+		printf("interest %2f",interest);
+	}
+	else if(c==0)
+	{
+		double interest=(p*y*0.10);
+		printf("interest %2f",interest);
+	}
+	else
+	{
+		printf("invalid");
+	}
+}
