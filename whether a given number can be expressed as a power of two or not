@@ -1,0 +1,27 @@
+#include <stdio.h>
+int isPowerOfTwo(int num) {
+    if (num <= 0) {
+        return 0; // Negative numbers and zero are not powers of two
+    }
+    while (num > 1) {
+        if (num % 2 != 0) {
+            return 0; // If at any step remainder is not 0, it's not a power of two
+        }
+        num /= 2;
+    }
+
+    return 1;
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (isPowerOfTwo(num)) {
+        printf("%d can be expressed as a power of 2.\n", num);
+    } else {
+        printf("%d cannot be expressed as a power of 2.\n", num);
+    }
+
+    return 0;
+}
