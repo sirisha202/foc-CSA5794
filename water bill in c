@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(){
+    float cubicfeet,price=0,bill;
+    printf("emnter the volume of water");
+    scanf("%f",&cubicfeet);
+    if(cubicfeet<=1000){
+        bill=15.00;
+    }
+    else if(cubicfeet>1000 && cubicfeet<=2000){
+        bill=15.00+(0.0175*(cubicfeet-1000));
+    }
+    else if(cubicfeet>2000 && cubicfeet<=3000){
+          bill=15.00+(0.0175*(cubicfeet-1000)+0.02*(cubicfeet-2000));
+    }
+    else{
+        bill=15.00+(0.0175*1000)+(0.02*1000)+70*(cubicfeet-3000);
+    }
+
+    printf("the bill of the house is %f",bill);
+    return 0;
+        
+}
