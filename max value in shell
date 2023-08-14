@@ -1,0 +1,10 @@
+max=1
+
+ while read i
+ do
+  if [[ "$i" > "$max" ]]; then
+     max="$i"
+  fi
+ done < a.txt
+
+ echo "$max" > b.txt
