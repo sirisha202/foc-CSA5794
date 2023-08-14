@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <ctype.h> // For isupper and islower functions
+
+int main() {
+    char inputString[100];
+    int uppercaseCount = 0, lowercaseCount = 0, i = 0;
+
+    // Input a string from the user
+    printf("Enter a string: ");
+    gets(inputString);
+
+    // Iterate through the characters in the string
+    while (inputString[i] != '\0') {
+        if (isupper(inputString[i])) {
+            uppercaseCount++;
+        } else if (islower(inputString[i])) {
+            lowercaseCount++;
+        }
+        i++;
+    }
+
+    printf("Number of Uppercase letters: %d\n", uppercaseCount);
+    printf("Number of Lowercase letters: %d\n", lowercaseCount);
+
+    return 0;
+}
